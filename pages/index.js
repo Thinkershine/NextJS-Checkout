@@ -4,7 +4,7 @@ const Index = () => (
   <div>
     <h1>Hello from Next.js!</h1>
     <Link href="/about">
-      <a>About Page</a>
+      <a title="About Page">About Page</a>
     </Link>
   </div>
 );
