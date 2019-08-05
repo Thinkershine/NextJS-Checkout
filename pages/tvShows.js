@@ -23,6 +23,14 @@ const TvShowLink = props => (
         <Link href="/tvShows/[id]" as={`/tvShows/${props.id}`}>
             <a>{props.id}</a>
         </Link>
+        <style jsx>
+            {`
+            img { cursor: pointer; }
+            a { text-decoration: none; font-weight: bold; }
+            a:hover { text-decoration: underline; }
+            li { list-style: none; }
+            `}
+        </style>
     </li>
 );
 
@@ -34,7 +42,7 @@ export default function TvShows(props) {
         <ul>
             <TvShowLink id="Batman"/>
             <TvShowLink id="Superman"/>
-            {props.shows.map(show => (<TvShowLink id={show.name} img={show.image.medium} name={show.name}/>))}
+            {props.shows.map(show => (<TvShowLink key={show.id} id={show.name} img={show.image.medium} name={show.name}/>))}
         </ul>
     </Layout>
 )};
