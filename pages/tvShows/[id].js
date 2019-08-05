@@ -5,8 +5,9 @@ import {useRouter} from "next/router";
 
 const baseApiURI = "https://api.tvmaze.com/search/shows/?q=";
 
-TvShow.getInitialProps = async function(){
-    const res = await fetch(baseApiURI + "batman");
+TvShow.getInitialProps = async function(context){
+    const {id} = context.query;
+    const res = await fetch(baseApiURI + id);
     const data = await res.json();
 
     console.log(`Fetched Data Count: ${data.length}`);

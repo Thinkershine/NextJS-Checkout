@@ -14,6 +14,7 @@ const TvShows = () => (
         <h1>Interesting TV Shows</h1>
         <ul>
             <TvShowLink id="Batman"/>
+            <TvShowLink id="Superman"/>
         </ul>
     </Layout>
 );
