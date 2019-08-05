@@ -15,6 +15,9 @@ const Header = () => (
     <Link href="/messageWithHOCLayout">
       <a style={linkStyle}>With HOC Layout</a>
     </Link>
+    <Link href="/blog">
+      <a style={linkStyle}>Blog</a>
+    </Link>
   </div>
 );
 
