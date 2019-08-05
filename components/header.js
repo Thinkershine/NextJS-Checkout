@@ -21,6 +21,9 @@ const Header = () => (
     <Link href="/dynamicBlog">
       <a style={linkStyle}>Dynamic Blog</a>
     </Link>
+    <Link href="/tvShows">
+      <a style={linkStyle}>TV Shows</a>
+    </Link>
   </div>
 );
 
