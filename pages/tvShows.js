@@ -4,7 +4,7 @@ import Link from "next/link";
 const TvShowLink = props => (
     <li>
         <Link href="/tvShows/[id]" as={`/tvShows/${props.id}`}>
-            {props.id}
+            <a>{props.id}</a>
         </Link>
     </li>
 );

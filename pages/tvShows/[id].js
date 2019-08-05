@@ -26,7 +26,7 @@ export default function TvShow(props) {
                 {props.shows.map(show => (
                     <li key={show.id}>
                         <Link href="/tvShows/id/[showId]" as={`/tvShows/id/${show.id}`}>
-                            {show.name}
+                            <a>{show.name}</a>
                         </Link>
                     </li>
                 ))}
