@@ -1,10 +1,17 @@
-import Layout from "../components/layout";
+import React, { Component } from "react";
 
-const Index = () => (
-  <Layout>
-    <h1>Hello from Next.js!</h1>
-  </Layout>
-);
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../css/site.css";
+
+class Index extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello from Next.js!</h1>;
+      </div>
+    );
+  }
+}
 
 export default Index;
 
