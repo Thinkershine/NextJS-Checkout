@@ -1,4 +1,3 @@
-import Layout from "../components/layout";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
@@ -16,13 +15,17 @@ TvShows.getInitialProps = async function() {
 };
 
 const TvShowLink = props => (
-  <li>
+  <div className="col-12 col-sm-4 text-center">
     <Link href="/tvShows/[id]" as={`/tvShows/${props.id}`}>
-      <img src={props.img} alt={props.name} />
+      <img className="card-img-top" src={props.img} alt={props.name} />
     </Link>
-    <Link href="/tvShows/[id]" as={`/tvShows/${props.id}`}>
-      <a>{props.id}</a>
-    </Link>
+    <div className="card-body">
+      <h4 className="card-title">
+        <Link href="/tvShows/[id]" as={`/tvShows/${props.id}`}>
+          <a>{props.id}</a>
+        </Link>
+      </h4>
+    </div>
     <style jsx>
       {`
         img {
@@ -40,7 +43,7 @@ const TvShowLink = props => (
         }
       `}
     </style>
-  </li>
+  </div>
 );
 
 export default function TvShows(props) {
@@ -48,9 +51,7 @@ export default function TvShows(props) {
   return (
     <>
       <h1>Interesting TV Shows</h1>
-      <ul>
-        <TvShowLink id="Batman" />
-        <TvShowLink id="Superman" />
+      <div className="row">
         {props.shows.map(show => (
           <TvShowLink
             key={show.id}
@@ -59,7 +60,10 @@ export default function TvShows(props) {
             name={show.name}
           />
         ))}
-      </ul>
+
+        <TvShowLink id="Batman" />
+        <TvShowLink id="Superman" />
+      </div>
     </>
   );
 }
