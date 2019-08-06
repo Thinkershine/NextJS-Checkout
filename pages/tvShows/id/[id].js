@@ -1,4 +1,3 @@
-import Layout from "../../../components/layout";
 import fetch from "isomorphic-unfetch";
 
 const apiEndPoint = "https://api.tvmaze.com/shows/";
