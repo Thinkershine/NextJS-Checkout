@@ -7,7 +7,7 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <h1>Hello from Next.js!</h1>;
+        <h1>Hello from Next.js!</h1>
       </div>
     );
   }
