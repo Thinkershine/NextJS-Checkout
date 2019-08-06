@@ -7,7 +7,16 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <h1>Hello from Next.js!</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col margintopbottom">
+              <h1>Hello from Next.js!</h1>
+              <h6 className="margintopbottom20">
+                So, here we are Getting Bigger Each DAY!
+              </h6>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

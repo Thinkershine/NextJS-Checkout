@@ -1,27 +1,42 @@
 import Link from "next/link";
 
-const linkStyle = {
-  marginRight: 15
-};
-
 const Header = () => (
-  <div>
-    <Link href="/">
-      <a style={linkStyle}>Home</a>
-    </Link>
-    <Link href="/about">
-      <a style={linkStyle}>About</a>
-    </Link>
-    <Link href="/blog">
-      <a style={linkStyle}>Blog</a>
-    </Link>
-    <Link href="/dynamicBlog">
-      <a style={linkStyle}>Dynamic Blog</a>
-    </Link>
-    <Link href="/tvShows">
-      <a style={linkStyle}>TV Shows</a>
-    </Link>
-  </div>
+  <nav className="navbar navbar-expand-sm bg-light navbar-light">
+    <div className="navbar">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link href="/">
+            <a className="nav-link">Home</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/about">
+            <a className="nav-link">About</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/blog">
+            <a className="nav-link">Blog</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/blog">
+            <a className="nav-link">Blog</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/dynamicBlog">
+            <a className="nav-link">Dynamic Blog</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/tvShows">
+            <a className="nav-link">TV Shows</a>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
 );
 
 export default Header;
