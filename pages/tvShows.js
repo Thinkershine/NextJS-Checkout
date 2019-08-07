@@ -48,9 +48,24 @@ const TvShowLink = props => (
 
 export default function TvShows(props) {
   console.log("SHOWS: ", props.shows);
+
   return (
     <>
       <h1>Interesting TV Shows</h1>
+      <div className="input-group mb-5">
+        <div className="input-group-prepend">
+          <span className="input-group-text">>></span>
+        </div>
+        <input
+          className="form-control"
+          onChange={e => {
+            setSearchText(e.target.value);
+          }}
+          placeholder="Search for Shows..."
+        />
+      </div>
+      <p>You Search For : {searchText}</p>
+
       <div className="row">
         {props.shows.map(show => (
           <TvShowLink
